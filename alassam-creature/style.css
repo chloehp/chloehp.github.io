@@ -1,0 +1,53 @@
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgb(32, 2, 42), rgb(0, 0, 0));
+  display: flex;
+  justify-content: center;
+}
+
+.creature {
+  position: fixed;
+  z-index: 20;
+  max-height: 111%;
+  max-width: 111%;
+  translate: -1% 1%;
+}
+
+.star {
+  position: fixed;
+  image-rendering: pixelated;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+@keyframes starmove {
+  from  {top: -20%;}
+  to    {top: 120%;}
+}
+
+.small {
+  width: 15px;
+  height: 15px;
+  background-image: url(/img/small.gif);
+  animation: starmove 27s linear 1;
+}
+
+.slow {
+  width: 45px;
+  height: 45px;
+  background-image: url(/img/slow.gif);
+  animation: starmove 42s linear 1;
+}
+
+.sure {
+  width: 30px;
+  height: 30px;
+  background-image: url(/img/sure.gif);
+  animation: starmove 36s linear 1;
+}
