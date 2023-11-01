@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Colour light</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<!--<div id="loader"></div>-->
+	<div id="container">
+		<div id="text"></div>
+		<div class="eye">
+			<div id="eye-open" onclick="settingsOpen()"></div>
+			<div id="eye-closed" onclick="settingsClose()"></div>
+		</div>
+		<div class="arrows">
+			<div id="arrow-left" onclick="nextText(-1, 4)">&lt;--</div>
+			<div id="arrow-right" onclick="nextText(1, 4)"></div>
+		</div>
+		<div id="settings" class="settings">
+			<div class="settings--tab-cont" id="tab-cont">
+				<div class="settings--tab-cont--addtab">+Blob</div>
+			</div>
+			<form class="settings--form" id="form">
+
+				<label class="settings--form--f">Colour: </label>
+				<input type="text" id="colour-in">
+				<p 	   class="settings--form--h" id="colour-figure"></p><br/>
+
+				<label class="settings--form--f">Height: </label>
+				<input type="number" id="height-in">
+				<label>/ 10</label>
+				<p 	   class="settings--form--h" id="height-figure"></p><br/>
+
+				<label class="settings--form--f">Speed: </label>
+				<input type="number" id="speed-in">
+				<label>/ 10</label>
+				<p 	   class="settings--form--h" id="speed-figure"></p><br/>
+
+				<label class="settings--form--f">Size: </label>
+				<input type="number" id="size-in">
+				<label>/ 10</label>
+				<p 	   class="settings--form--h" id="size-figure"></p><br/>
+
+			</form>
+			<div class="settings--add" onclick="inputForm()">Add</div>
+		</div>
+		<div id="circle" onclick="circle()"></div>
+		<!--
+		<div class="blob" id="blob1"></div>
+		<div class="blob" id="blob2"></div>
+		<div class="blob" id="blob3"></div>
+		<div class="blob" id="blob4"></div>
+		<div class="blob" id="blob5"></div>
+		-->
+	</div>
+
+<!-- partial -->
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js'></script>
+<script  src="./script.js"></script>
+<script  src="./text.js"></script>
+<script>lightInit()</script>
+</body>
+</html>

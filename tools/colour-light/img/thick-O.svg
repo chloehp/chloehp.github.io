@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70.87" height="52.294" viewBox="0 0 70.87 52.294">
+  <g id="Group_1" data-name="Group 1" transform="translate(-7.25 -266.5)">
+    <path id="Path_9" data-name="Path 9" d="M69.415,308.228C83.171,284.4,103.8,286.991,103.8,286.991" transform="translate(-60 -11.53)" fill="none" stroke="#000000" stroke-width="5"/>
+    <path id="Path_10" data-name="Path 10" d="M69.415,308.228C83.171,284.4,103.8,286.991,103.8,286.991" transform="translate(-60 -11.53)" fill="none" stroke="#000000" stroke-width="5"/>
+    <path id="Path_11" data-name="Path 11" d="M103.8,308.228C90.045,284.4,69.415,286.991,69.415,286.991" transform="translate(-27.845 -11.53)" fill="none" stroke="#000000" stroke-width="5"/>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(29 282)" fill="none" stroke="#000000" stroke-width="5">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="11.5" fill="none"/>
+    </g>
+    <path id="Path_15" data-name="Path 15" d="M69.415,286.908c13.755,23.825,34.385,21.238,34.385,21.238" transform="translate(-60 8.008)" fill="none" stroke="#000000" stroke-width="5"/>
+    <path id="Path_16" data-name="Path 16" d="M103.8,286.908c-13.755,23.825-34.385,21.238-34.385,21.238" transform="translate(-27.845 8.008)" fill="none" stroke="#000000" stroke-width="5"/>
+    <line id="Line_1" data-name="Line 1" y2="8" transform="translate(43.084 266.5)" fill="none" stroke="#000000" stroke-width="5"/>
+    <path id="Path_17" data-name="Path 17" d="M0,0V8" transform="matrix(0.891, 0.454, -0.454, 0.891, 63.559, 272.024)" fill="none" stroke="#000000" stroke-width="5"/>
+    <line id="Line_3" data-name="Line 3" y1="8" transform="matrix(-0.891, 0.454, -0.454, -0.891, 26.242, 279.152)" fill="none" stroke="#000000" stroke-width="5"/>
+  </g>
+</svg>
