@@ -34,20 +34,20 @@
 .small {
   width: 15px;
   height: 15px;
-  background-image: url(/img/small.gif);
+  background-image: url(img/small.gif);
   animation: starmove 27s linear 1;
 }
 
 .slow {
   width: 45px;
   height: 45px;
-  background-image: url(/img/slow.gif);
+  background-image: url(img/slow.gif);
   animation: starmove 42s linear 1;
 }
 
 .sure {
   width: 30px;
   height: 30px;
-  background-image: url(/img/sure.gif);
+  background-image: url(img/sure.gif);
   animation: starmove 36s linear 1;
 }
