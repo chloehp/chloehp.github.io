@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Read</title>
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div class="container">
+			<input onchange="readFile(this)" type="file">
+			<input onclick="JSONsplot()" type="button" value="Compare JSON and XLF">
+
+			<div class="json-lines">
+				<div class="line"></div>
+			</div>
+		</div>
+		<p class="json-content"></p>
+		<p class="xlf-content"></p>
+		<script  src="./script.js"></script>
+	</body>
+</html>
