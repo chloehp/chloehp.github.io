@@ -1,0 +1,49 @@
+.json-content, .xlf-content {display: none;}
+
+input {
+  cursor: pointer;
+}
+
+#download-button {
+  opacity: 0.45;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+
+#text-input1, #text-input2 {
+  display: inline;
+  margin-top: 15px;
+  margin-bottom: 12px;
+  width: 240px;
+  max-width: 90%;
+  cursor: auto;
+}
+
+.container {
+  margin: 6%
+}
+
+.line {
+  width: 90%;
+  height: 2px;
+  background-color: #181818;
+}
+
+input {
+  display: inline;
+}
+
+.json-lines {
+  margin-top: 30px;
+}
+
+.xlf-match {
+  display: inline;
+  color: green;
+  margin-left: 30px;
+}
+.no-match {
+  display: inline;
+  color: red;
+  margin-left: 30px;
+}

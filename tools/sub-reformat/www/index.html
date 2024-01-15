@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Convert VTT - CSA</title>
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div class="container">
+			<input onchange="readFile(this)" type="file">
+			<input onclick="convertGo()" type="button" value="Convert VTT to JS">
+			<br>
+			<input type="text" id="text-input1" placeholder="Enter textKey here...">
+			<p style="display: inline;">X</p>
+			<input type="text" id="text-input2" placeholder="Enter textKey here...">
+			<br>
+			<label for="quantity">Starting number: </label>
+			<input type="number" id="num-input" value="0">
+
+			<div class="json-lines">
+				<div class="line"></div>
+			</div>
+		</div>
+		<p class="vtt-content"></p>
+		<script  src="./script.js"></script>
+	</body>
+</html>

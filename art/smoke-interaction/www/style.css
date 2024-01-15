@@ -1,0 +1,61 @@
+@keyframes fade-out {
+  from {opacity: 1;}
+  to {opacity: 0;}   
+}
+
+.display-none {
+  display: none;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgb(227, 236, 240);
+  overflow: hidden;
+}
+
+#burn {
+  position: absolute;
+  width: 15px;
+  height: 6px;
+  left: 50%;
+  bottom: 12%;
+  background-color: rgb(255, 51, 0);
+}
+
+.cont-p {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  transition: all 1.5s;
+}
+.left-p {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.right-p {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.puff {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 22.5px;
+  left: 22.5px;
+  border-radius: 100%;
+  background-color: rgba(150, 150, 150, 0.18);
+}
