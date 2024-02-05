@@ -33,9 +33,11 @@ function replaceTextX() {
         for (let x = 0; x < languageObj.pages.length; x++) {
             const fields = languageObj.pages[x].fields;
             for (let i = 0; i < fields.length; i++) {
-                const text = fields[i].Text;
-                const result = text.replace(text, textInput.repeat(text.length / textInput.length));
-                languageObj.pages[x].fields[i].Text = result;
+                if (fields[i] !== "key"){
+                    const text = fields[i].Text;
+                    const result = text.replace(text, textInput.repeat(text.length / textInput.length));
+                    languageObj.pages[x].fields[i].Text = result;
+                }
             }
         }        
     }
