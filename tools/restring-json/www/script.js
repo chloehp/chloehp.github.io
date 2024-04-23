@@ -33,11 +33,9 @@ function replaceTextX() {
         for (let x = 0; x < languageObj.pages.length; x++) {
             const fields = languageObj.pages[x].fields;
             for (let i = 0; i < fields.length; i++) {
-                if (fields[i] !== "key"){
                     const text = fields[i].Text;
                     const result = text.replace(text, textInput.repeat(text.length / textInput.length));
                     languageObj.pages[x].fields[i].Text = result;
-                }
             }
         }        
     }
@@ -57,12 +55,15 @@ function replaceTextX() {
 
 function printObject(obj) {
     for (let key in obj) {
-      let innerObj = obj[key]
+      let innerObj = obj[key];
       if (innerObj instanceof Object) {
-        printObject(innerObj)
-      } else {
-        obj[key] = innerObj.replace(innerObj, textInput.repeat(innerObj.length / textInput.length));
-        //console.log(key + ":", innerObj)
+        printObject(innerObj);
+      } 
+      else {
+        if (key !== "key"){
+            obj[key] = innerObj.replace(innerObj, textInput.repeat(innerObj.length / textInput.length));
+            //console.log(key + ":", innerObj)
+        }
       }
     }
   }
