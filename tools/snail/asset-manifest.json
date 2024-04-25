@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca82385d.css",
-    "main.js": "/static/js/main.40342d8a.js",
-    "static/js/453.81ede328.chunk.js": "/static/js/453.81ede328.chunk.js",
+    "main.css": "/static/css/main.7bfa0a74.css",
+    "main.js": "/static/js/main.1a94bb19.js",
+    "static/js/453.0aedc32e.chunk.js": "/static/js/453.0aedc32e.chunk.js",
     "static/media/snailexport2.png": "/static/media/snailexport2.c6dfc74d2f50694bf6c5.png",
     "static/media/AlumniSansInlineOne-Italic.ttf": "/static/media/AlumniSansInlineOne-Italic.26f316846f72658bf226.ttf",
     "static/media/OpenDyslexic-Regular.otf": "/static/media/OpenDyslexic-Regular.d9b06c5ffd7d312017e5.otf",
@@ -20,12 +20,12 @@
     "static/media/single-arrow.svg": "/static/media/single-arrow.8c07a585c8e4caf6f5c8.svg",
     "static/media/play.svg": "/static/media/play.349e76101b04c57e7237.svg",
     "static/media/pause.svg": "/static/media/pause.fef961488339c2c3d1fc.svg",
-    "main.ca82385d.css.map": "/static/css/main.ca82385d.css.map",
-    "main.40342d8a.js.map": "/static/js/main.40342d8a.js.map",
-    "453.81ede328.chunk.js.map": "/static/js/453.81ede328.chunk.js.map"
+    "main.7bfa0a74.css.map": "/static/css/main.7bfa0a74.css.map",
+    "main.1a94bb19.js.map": "/static/js/main.1a94bb19.js.map",
+    "453.0aedc32e.chunk.js.map": "/static/js/453.0aedc32e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca82385d.css",
-    "static/js/main.40342d8a.js"
+    "static/css/main.7bfa0a74.css",
+    "static/js/main.1a94bb19.js"
   ]
 }
