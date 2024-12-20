@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #35524c;
+  transition: background-color 900ms 720ms;
+}
+button {
+  background: none;
+  border: none;
+}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+#loady {
+  position: absolute;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: #35524c;
+  scale: 6;
+  transition: scale 1500ms 300ms;
+  z-index: 27;
+  translate: -50% -50%;
+  left: 49.8%; top: 23.9%;
+  width: 81%;
+  @media (min-width: 720px) {
+    left: 49.8%; top: 24.6%;
+    width: 30%
+  }
+}
+
+.base {
+  position: relative;  
+  width: 100%;
+  aspect-ratio: 360/1230;
+  background-color: #efe3cd;
+  overflow: hidden; 
+  left: 50%;
+  translate: -50%;
+  @media (min-width: 720px) {
+    aspect-ratio: 1920/2687;
+    background-image: url(assets/mid_1080p/base.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 15%;
+    max-width: 1920px;
+    @media (max-width: 1260px) {
+      width: 135%;
+      left: 50%;
+      translate: -50%;
+    }
+  }
+}
+.top-text {
+  position: absolute;
+  bottom: 93%;
+  margin: 0;
+  font-family: 'GrandifloraOne';
+  font-weight: 100;
+  color: #3d3223;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 12;
+}
+
+.ringc {
+  position: absolute;
+  translate: -50% -50%;
+  aspect-ratio: 1/1;
+  overflow: hidden; 
+  z-index: 5;
+}
+.ringc--ring {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 6;
+  transition: rotate 420ms;
+}
+.ringc--circle {
+  position: absolute;
+  top: 50%; left: 50%;
+  translate: -50% -50%;
+  transition: opacity 450ms;
+  pointer-events: auto;
+  z-index: 6;
+}
+.ringc--heading {
+  position: absolute;
+  top: 50%; left: 50%;
+  translate: -50% -50%;
+  width: 90%;
+  z-index: 5;
+  margin: 0;
+  font-family: 'YesevaOne';  
+  font-size: 39px;
+  color: #b35a41;
+  text-transform: uppercase;
+  text-align: center;
+  border-top: #b35a41 3px solid;
+  border-bottom: #b35a41 3px solid;
+  @media (min-width: 720px) {
+    font-size: 4.8vw;
+    @media (min-width: 1920px) { font-size: 90px;}
+  }
+}
+.ringc--link {
+  position: absolute;
+  left: 50%;
+  margin: 3% 0;
+  translate: -50% -50%;
+  font-family: 'GrandifloraOne';
+  font-weight: bold;
+  text-align: center;
+  color: #24292c;
+  opacity: 0;
+  transition: opacity 450ms;
+  z-index: 15;
+  @media (min-width: 720px) {
+    font-size: 1.5vw;      
+    @media (min-width: 1920px) { font-size: 30px;}
+  }
+}
+.ringc--link img {width: 100%;}
+.ringc:hover .ringc--circle {opacity: 0.15;}
+.ringc:focus .ringc--circle {
+  opacity: 0.15;
+  border: #385c70 3px solid;
+  border-radius: 100%;
+}
+.ringc:hover .ringc--link {opacity: 0.78;}
+.ringc:focus .ringc--link {opacity: 0.78;}
+
+.sub-image {
+  position: absolute;
+  translate: -50% -50%;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.centre-image {  
+  left: 49.8%; top: 23.9%; width: 84%;
+  z-index: 30;
+  animation: fade-in 300ms;
+  
+  @media (min-width: 720px) {
+    left: 49.8%; top: 24.6%; width: 32%;
+    z-index: 30;
+    animation: fade-in 300ms;
+  }
+}

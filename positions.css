@@ -1,0 +1,175 @@
+/* MOBILE */
+@media (max-width: 719px) {
+    #toptext-left {
+        display: none;
+        left: 13.5%;
+        font-size: 30px;
+        background-color: #efe3cd;
+    }
+    #toptext-centre {
+        left: 50%; top: 0;
+        translate: -50%;
+        width: 150px;
+        font-size: 24px;
+        bottom: auto;
+        background-color: #f0e3d2;
+    }
+    #toptext-right {
+        display: none;
+        right: 13.5%;
+        font-size: 30px;
+        background-color: #f6e7d5;
+    }
+
+    #s008-001 {  
+        left: 49.8%; top: 23.9%; width: 120%;
+        z-index: 24;
+        animation: spin 240s linear infinite;
+    }
+
+    #s002 {      
+        left: 100%;  top: 0;  width: 72%;
+        animation: spin 120s linear infinite reverse;
+        z-index: 18;
+        @media (max-width: 300px) {display: none;}
+    }
+    #s004 {    
+        left: 0;  top: -0.244%;  width: 72%;
+        animation: spin 120s linear infinite reverse;
+        z-index: 18;
+        @media (max-width: 300px) {display: none;}
+    }
+
+    #s005-000 {width: 62%;}
+    #s005 {left: 18%;  top: 51.22%;  width: 64%;}
+
+    #s006-000 {width: 75.3%;}
+    #s006 {left: 82%;  top: 51.22%;  width: 64%;}
+
+    #s007-000 {width: 78.7%;}
+    #s007-001 {animation: spin 120s linear infinite reverse;}
+    #s007 {left: 50%;  top: 73.17%;  width: 99%;}
+    #s007-email {top: 60%;}
+
+    #bottom {
+        position: absolute;
+        left: -1%; bottom: 0;
+        width: 102%;
+    }
+    #filigree1-l {    
+        left: 12%; top: 39.84%;
+        width: 15%;
+        rotate: -84deg;
+    }
+    #filigree1-r {    
+        left: 88%; top: 39.84%;
+        width: 15%;
+        rotate: -96deg;
+        transform: scaleY(-1);
+    }
+    #filigree2 {    
+        left: 49.3%; top: 44.06%;
+        width: 15%;
+        rotate: -87deg;
+    }
+    #filigree1-2-l {    
+        left: 9%; top: 62.2%;
+        width: 12%;
+        rotate: -105deg;
+        transform: scaleX(-1);
+    }
+    #filigree1-2-r {        
+        left: 91%; top: 62.2%;
+        width: 12%;
+        rotate: -75deg;
+        scale: -1;
+    }
+    #filigree2-2 {    
+        left: 50%; top: 56.59%;
+        width: 9%;
+        rotate: 90deg;
+    }
+    #filigree3-l {        
+        left: 12%; top: 84.39%;
+        width: 21%;
+        rotate: -106deg;
+        transform: scaleY(-1);
+    }
+    #filigree3-r {    
+        left: 88%; top: 84.39%;
+        width: 21%;
+        rotate: -75deg;
+    }
+
+    #borderleft, #borderright 
+    {display: none;}
+}
+
+/* DESKTOP */
+@media (min-width: 720px) {
+    #toptext-left {
+        left: 13.5%;
+        font-size: 30px;
+        background-color: #efe3cd;
+        @media (max-width: 1080px) {font-size: 15px;}
+    }
+    #toptext-centre {
+        left: 50%;
+        font-size: 45px;
+        translate: -50%;
+        background-color: #f0e3d2;
+    }
+    #toptext-right {
+        right: 13.5%;
+        font-size: 30px;
+        background-color: #f6e7d5;
+        @media (max-width: 1080px) {font-size: 15px;}
+    }
+    
+    #s008-001 {  
+        left: 49.8%; top: 24.6%; width: 46%;
+        animation: spin 240s linear infinite;
+        z-index: 24;
+    }
+    
+    #s002 {      
+        left: 86.24%;  top: 23.42%;  width: 26.3%;
+        animation: spin 120s linear infinite reverse;
+    }
+    #s004 {    
+        left: 13.8%;  top: 23.8%;  width: 26%;
+        animation: spin 120s linear infinite reverse;
+    }
+    
+    #s005-000 {width: 62%;}
+    #s005 {left: 26.2%;  top: 40.03%;  width: 25.5%;}
+    
+    #s006-000 {width: 75.3%;}
+    #s006 {left: 73.9%;  top: 39.8%;  width: 25.5%;}
+    
+    #s007-000 {width: 78.7%;}
+    #s007-001 {animation: spin 120s linear infinite reverse;}
+    #s007 {left: 50%;  top: 48.8%;  width: 28%;}
+    #s007-email {top: 64%;}
+    #s007-gh {
+        top: 77%; width: 12%;
+    }
+    
+    #borderleft {
+        display: block;
+        position: absolute;
+        left: 0; top: 0;
+        width: 13.52%;
+        z-index: 9;
+    }
+    #borderright {  
+        display: block;
+        position: absolute;
+        right: 0;  top: 0; 
+        width: 13.52%;
+        z-index: 9;
+    }    
+    
+    #bottom, #filigree1-l, #filigree1-r, #filigree2, #filigree1-2-l, #filigree1-2-r, #filigree2-2, #filigree3-l, #filigree3-r
+    {display: none;}
+}
