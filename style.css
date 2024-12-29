@@ -39,7 +39,7 @@ a:hover {text-decoration: underline;}
   translate: -50%;
   @media (min-width: 720px) {
     aspect-ratio: 1920/2687;
-    background-image: url(assets/mid_1080p/base.jpg);
+    background-image: url(mid_1080p/base.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center 15%;
@@ -92,7 +92,7 @@ a:hover {text-decoration: underline;}
   width: 90%;
   z-index: 5;
   margin: 0;
-  font-family: 'YesevaOne';  
+  font-family: 'ElsieSwashCaps';  
   font-size: 39px;
   color: #b35a41;
   text-transform: uppercase;
@@ -100,7 +100,7 @@ a:hover {text-decoration: underline;}
   border-top: #b35a41 3px solid;
   border-bottom: #b35a41 3px solid;
   @media (min-width: 720px) {
-    font-size: 4.8vw;
+    font-size: 4.5vw;
     @media (min-width: 1920px) { font-size: 90px;}
   }
 }
@@ -148,4 +148,8 @@ a:hover {text-decoration: underline;}
     z-index: 30;
     animation: fade-in 300ms;
   }
+}
+
+#s007-h {
+  font-family: 'YesevaOne';
 }

@@ -9,9 +9,13 @@
 
 @font-face {
     font-family: 'GrandifloraOne';
-    src: url(assets/GrandifloraOne-Regular.ttf);
+    src: url(assets/GrandifloraOne-Reduced.ttf);
 }
 @font-face {
     font-family: 'YesevaOne';
     src: url(assets/YesevaOne-Regular.ttf);
+}
+@font-face {
+    font-family: 'ElsieSwashCaps';
+    src: url(assets/ElsieSwashCaps-Black.ttf);
 }
