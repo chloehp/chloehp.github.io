@@ -2,9 +2,17 @@
     from {opacity: 0;}
     to {opacity: 1;}   
 }
+@keyframes pulse {
+    from {opacity: 1;}
+    to {opacity: 0.6;}   
+}
 @keyframes spin {
     from {rotate: 0deg;}
     to {rotate: 360deg;}
+}
+@keyframes spin3 {
+    from {rotate: 0deg;}
+    to {rotate: 1080deg;}
 }
 
 @font-face {

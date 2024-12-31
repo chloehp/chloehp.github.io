@@ -9,7 +9,10 @@ button {
   background: none;
   border: none;
 }
-a {text-decoration: none;}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
 a:hover {text-decoration: underline;}
 
 #loady {
@@ -28,8 +31,32 @@ a:hover {text-decoration: underline;}
     width: 30%
   }
 }
+#loady-text {
+  position: absolute;
+  left: 50%; top: 6.6%;
+  translate: -50%;
+  color: #6cac85;
+  font-family: 'GrandifloraOne', serif;  
+  font-size: 24px;
+  font-style: oblique;
+  transition: color 600ms 750ms;
+  animation: pulse 1200ms ease-in-out alternate 1200ms infinite;
+  z-index: 28;
+  @media (min-width: 720px) {
+    font-size: 48px;
+  }
+}
+
 
 .base {
+  @media (min-width: 720px) {
+    background-image: url(assets/mid_1080p/base.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 15%;
+  }
+}
+.base, .baseless {
   position: relative;  
   width: 100%;
   aspect-ratio: 360/1230;
@@ -39,10 +66,6 @@ a:hover {text-decoration: underline;}
   translate: -50%;
   @media (min-width: 720px) {
     aspect-ratio: 1920/2687;
-    background-image: url(assets/mid_1080p/base.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center 15%;
     max-width: 1920px;
     @media (max-width: 1260px) {
       width: 135%;
@@ -55,12 +78,34 @@ a:hover {text-decoration: underline;}
   position: absolute;
   bottom: 93%;
   margin: 0;
-  font-family: 'GrandifloraOne';
+  font-family: 'GrandifloraOne', serif;
   font-weight: 100;
   color: #3d3223;
   text-transform: uppercase;
   text-align: center;
   z-index: 12;
+}
+.top-dec {
+  position: absolute;
+  right: -36%; top: 45%;
+  height: 12px; width: 30%;
+  border-top: #3d3223 1px solid;
+  border-bottom: #3d3223 1px solid;
+  pointer-events: none;
+}
+.top-dec-l {
+  scale: -1; 
+  left: -36%;
+}
+.top-dec--sp1, .top-dec--sp2 {
+  position: absolute;
+  left: 0;  top: 12px;
+  translate: -60%;
+  height: 15px;
+}
+.top-dec--sp2 {
+  transform: scaleY(-1);
+  top: -15px;
 }
 
 .ringc {
@@ -81,7 +126,7 @@ a:hover {text-decoration: underline;}
   position: absolute;
   top: 50%; left: 50%;
   translate: -50% -50%;
-  transition: opacity 450ms;
+  transition: opacity 600ms;
   pointer-events: auto;
   z-index: 6;
 }
@@ -92,7 +137,7 @@ a:hover {text-decoration: underline;}
   width: 90%;
   z-index: 5;
   margin: 0;
-  font-family: 'ElsieSwashCaps';  
+  font-family: 'ElsieSwashCaps', serif;  
   font-size: 39px;
   color: #b35a41;
   text-transform: uppercase;
@@ -109,7 +154,7 @@ a:hover {text-decoration: underline;}
   left: 50%;
   margin: 3% 0;
   translate: -50% -50%;
-  font-family: 'GrandifloraOne';
+  font-family: 'GrandifloraOne', serif;
   font-weight: bold;
   text-align: center;
   color: #24292c;
@@ -122,9 +167,9 @@ a:hover {text-decoration: underline;}
   }
 }
 .ringc--link img {width: 100%;}
-.ringc:hover .ringc--circle {opacity: 0.15;}
+.ringc:hover .ringc--circle {opacity: 0.09 !important;}
 .ringc:focus .ringc--circle {
-  opacity: 0.15;
+  opacity: 0.09 !important;
   border: #385c70 3px solid;
   border-radius: 100%;
 }
@@ -151,5 +196,43 @@ a:hover {text-decoration: underline;}
 }
 
 #s007-h {
-  font-family: 'YesevaOne';
+  font-family: 'YesevaOne', serif;
+}
+
+.pagey {
+  position: absolute;
+  left: 0; top: 7.75%; 
+  width: 100%; height: 92.25%;
+  border: #3d322396 1.5px solid;
+  z-index: 12;
+  @media (min-width: 720px) {
+    left: 13.52%; top: 7.75%; 
+    width: 72.96%; height: 81.25%;    
+  }
+}
+.content {
+  position: absolute;
+  width: 90%; height: 48%;
+  top: 30%; left: 5%;
+  border: #3d322396 1.5px solid;
+}
+.content--spiral {
+  position: absolute;
+  height: 33px;
+  pointer-events: none;
+}
+.spiral-tl {
+  top: -33px; left: -20px;
+  transform: scaleY(-1);
+}
+.spiral-tr {
+  top: -33px; right: -20px;
+  scale: -1;
+}
+.spiral-bl {
+  bottom: -33px; left: -20px;
+}
+.spiral-br {
+  bottom: -33px; right: -20px;
+  transform: scaleX(-1);
 }

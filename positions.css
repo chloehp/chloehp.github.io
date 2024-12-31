@@ -50,6 +50,9 @@
     #s007-001 {animation: spin 120s linear infinite reverse;}
     #s007 {left: 50%;  top: 73.17%;  width: 99%;}
     #s007-email {top: 60%;}
+    #s007-gh {
+        top: 75%; width: 15%;
+    }
 
     #bottom {
         position: absolute;

@@ -1,22 +1,45 @@
-//window.scroll(0, 120);
+//elements
+let rightring;
+let leftring;
+let circle;
+
 document.onreadystatechange = function () {
     if (document.readyState === "complete") {
         const loady = document.getElementById("loady");
+        const loadyText = document.getElementById("loady-text");
+        circle = document.querySelectorAll(".ringc--circle");
+
+        rightring = document.getElementById("s006-001");
+        leftring = document.getElementById("s005-001");
+
         loady.style.scale = 1;
+        loadyText.style.color = "#6cac8500";
         document.body.style.backgroundColor = "#f1dbbf";
+        document.getElementById("s008-000").scrollIntoView(false);
         setInterval(scrollUpdate, 120);
+
         setTimeout(function(){
             document.getElementById("s008-000-l").remove();
             loady.remove();
+            loadyText.remove();
         }, 1800);
     }
 }
 
 function scrollUpdate() {
-    const scrolled = document.documentElement.scrollTop / (6 + (screen.width / 150));
-    const rightring = document.getElementById("s006-001");
-    const leftring = document.getElementById("s005-001");
+    const docScroll = document.documentElement.scrollTop;
+    const scrolled = docScroll / (6 + (screen.width / 150));    
     rightring.style.rotate = scrolled + "deg";
     leftring.style.rotate = "-" + scrolled + "deg";
-    //console.log(document.readyState);
+    
+    if (docScroll > 240) {
+        circle[0].style.opacity = "0.3";
+        circle[1].style.opacity = "0.3";
+        circle[2].style.opacity = "0.3";
+    }
+    else {
+        circle[0].style.opacity = "";
+        circle[1].style.opacity = "";
+        circle[2].style.opacity = "";
+    }
 }
