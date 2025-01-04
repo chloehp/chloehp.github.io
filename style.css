@@ -9,7 +9,7 @@ button {
   background: none;
   border: none;
 }
-a {
+a, button {
   text-decoration: none;
   cursor: pointer;
 }
@@ -65,6 +65,8 @@ a:hover {text-decoration: underline;}
   left: 50%;
   translate: -50%;
   @media (min-width: 720px) {
+    perspective: 3000px;
+    perspective-origin: center 18%;
     aspect-ratio: 1920/2687;
     max-width: 1920px;
     @media (max-width: 1260px) {
@@ -173,8 +175,8 @@ a:hover {text-decoration: underline;}
   border: #385c70 3px solid;
   border-radius: 100%;
 }
-.ringc:hover .ringc--link {opacity: 0.78;}
-.ringc:focus .ringc--link {opacity: 0.78;}
+.ringc:hover .ringc--link {opacity: 0.9;}
+.ringc--link:focus {opacity: 0.9;}
 
 .sub-image {
   position: absolute;
@@ -186,18 +188,27 @@ a:hover {text-decoration: underline;}
 .centre-image {  
   left: 49.8%; top: 23.9%; width: 84%;
   z-index: 30;
-  animation: fade-in 300ms;
+  aspect-ratio: 1/1;
   
   @media (min-width: 720px) {
     left: 49.8%; top: 24.6%; width: 32%;
-    z-index: 30;
-    animation: fade-in 300ms;
   }
 }
 
-#s007-h {
-  font-family: 'YesevaOne', serif;
+.flip {
+  transition: transform 1800ms;  
+  /*transform-style: preserve-3d;*/
+  transform: rotateY(0deg);
+  pointer-events: all;
 }
+.flip--back, .flip--front {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  top: 0; left: 0;
+  pointer-events: none;
+}
+.flip--back {transform: rotateY(180deg);}
 
 .pagey {
   position: absolute;
@@ -210,11 +221,44 @@ a:hover {text-decoration: underline;}
     width: 72.96%; height: 81.25%;    
   }
 }
+.flexwrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 .content {
+  align-items: baseline;
   position: absolute;
-  width: 90%; height: 48%;
-  top: 30%; left: 5%;
+  padding-right: 12px;
+  width: 84%; height: 48%;
+  top: 30%; left: 6%;
   border: #3d322396 1.5px solid;
+  @media (min-width: 720px) {
+    width: 90%;
+    left: 5%;   
+  }
+}
+.content--column {
+  flex: 50%;
+  max-width: 50%;
+  @media (min-width: 720px) {
+    flex: 25%;
+    max-width: 25%; 
+  }
+}
+.content--dblcolumn {
+  flex: 100%;
+  max-width: 100%;
+  @media (min-width: 720px) {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+.content--element {
+  width: 100%;
+  margin-top: 12px; margin-left: 12px;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: opacity 600ms, scale 600ms ease-out;
 }
 .content--spiral {
   position: absolute;

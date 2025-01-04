@@ -13,55 +13,58 @@
 <body>
 	<div class="base">
     <div id="loady"></div>
-    <p id="loady-text" mask="url(#loady)">Loading</p>
-    <img src="assets/lowest_quality/008-000.png" class="sub-image centre-image" loading="eager" id="s008-000-l"/>
-    <img src="assets/mid_1080p/008-000.png" class="sub-image centre-image" id="s008-000"/>
-    <img src="assets/mid_1080p/008-001.png" class="sub-image" id="s008-001"/>
+    <p id="loady-text">Loading</p>
+    <img alt="" src="assets/lowest_quality/008-000.png" class="sub-image centre-image" loading="eager" id="s008-000-l"/>
+    <button class="flip centre-image sub-image" onclick="flip(event)" tabindex>
+      <img alt="flipped" src="assets/mid_1080p/008-000-flipped.png" class="flip--back" id="s008-000-flipped"/>
+      <img alt="" src="assets/mid_1080p/008-000.png" class="flip--front" id="s008-000"/>
+    </button>
+    <img alt="" src="assets/mid_1080p/008-001.png" class="sub-image" id="s008-001"/>
 
     
-    <h1 class="top-text" id="toptext-centre" tabindex="10">
-      <div class="top-dec top-dec-l"><img class="top-dec--sp1" src="./assets/spiral1.svg"/><img class="top-dec--sp2" src="./assets/spiral1.svg"/></div>
+    <h1 class="top-text" id="toptext-centre">
+      <div class="top-dec top-dec-l"><img alt="" class="top-dec--sp1" src="./assets/spiral1.svg"/><img alt="" class="top-dec--sp2" src="./assets/spiral1.svg"/></div>
       Chloe Elowen
-      <div class="top-dec"><img class="top-dec--sp1" src="./assets/spiral1.svg"/><img class="top-dec--sp2" src="./assets/spiral1.svg"/></div>
+      <div class="top-dec"><img alt="" class="top-dec--sp1" src="./assets/spiral1.svg"/><img alt="" class="top-dec--sp2" src="./assets/spiral1.svg"/></div>
     </h1>
     <h2 class="top-text" id="toptext-left">Designer</h2>
     <h2 class="top-text" id="toptext-right">Developer</h2>
     
-    <img src="assets/mid_1080p/filigree1.png" class="sub-image" id="filigree1-l"/>
-    <img src="assets/mid_1080p/filigree1.png" class="sub-image" id="filigree1-r"/>
-    <img src="assets/mid_1080p/filigree1.png" class="sub-image" id="filigree1-2-l"/>
-    <img src="assets/mid_1080p/filigree1.png" class="sub-image" id="filigree1-2-r"/>
-    <img src="assets/mid_1080p/filigree2.png" class="sub-image" id="filigree2"/>
-    <img src="assets/mid_1080p/filigree2.png" class="sub-image" id="filigree2-2"/>
-    <img src="assets/mid_1080p/filigree3.png" class="sub-image" id="filigree3-l"/>
-    <img src="assets/mid_1080p/filigree3.png" class="sub-image" id="filigree3-r"/>
-    <img src="assets/mid_1080p/bottom.png" id="bottom"/>
+    <img alt="" src="assets/mid_1080p/filigree1.png" class="sub-image" id="filigree1-l"/>
+    <img alt="" src="assets/mid_1080p/filigree1.png" class="sub-image" id="filigree1-r"/>
+    <img alt="" src="assets/mid_1080p/filigree1.png" class="sub-image" id="filigree1-2-l"/>
+    <img alt="" src="assets/mid_1080p/filigree1.png" class="sub-image" id="filigree1-2-r"/>
+    <img alt="" src="assets/mid_1080p/filigree2.png" class="sub-image" id="filigree2"/>
+    <img alt="" src="assets/mid_1080p/filigree2.png" class="sub-image" id="filigree2-2"/>
+    <img alt="" src="assets/mid_1080p/filigree3.png" class="sub-image" id="filigree3-l"/>
+    <img alt="" src="assets/mid_1080p/filigree3.png" class="sub-image" id="filigree3-r"/>
+    <img alt="" src="assets/mid_1080p/bottom.png" id="bottom"/>
     
-    <img src="assets/mid_1080p/002.png" class="sub-image" id="s002"/>
-    <img src="assets/mid_1080p/004.png" class="sub-image" id="s004"/>
+    <img alt="" src="assets/mid_1080p/002.png" class="sub-image" id="s002"/>
+    <img alt="" src="assets/mid_1080p/004.png" class="sub-image" id="s004"/>
     
-    <a class="ringc" id="s005" tabindex="20" href="./code&developement/" aria-label="Code and Developement">
+    <a class="ringc" id="s005" tabindex href="./code&developement/" aria-label="Code and Developement">
       <h3 class="ringc--heading" id="s005-h">Code<br>& Dev</h3>
-      <img src="assets/mid_1080p/005-001.png" class="ringc--ring" id="s005-001"/>
-      <img src="assets/mid_1080p/005-000.png" class="ringc--circle" id="s005-000"/>
+      <img alt="" src="assets/mid_1080p/005-001.png" class="ringc--ring" id="s005-001"/>
+      <img alt="" src="assets/mid_1080p/005-000.png" class="ringc--circle" id="s005-000"/>
     </a>
     
-    <a class="ringc" id="s006" tabindex="30" href="./art&design/" aria-label="Art and Design">
+    <a class="ringc" id="s006" tabindex href="./art&design/" aria-label="Art and Design">
       <h3 class="ringc--heading" id="s006-h">Art & <br>Design</h3>
-      <img src="assets/mid_1080p/006-001.png" class="ringc--ring" id="s006-001"/>
-      <img src="assets/mid_1080p/006-000.png" class="ringc--circle" id="s006-000"/>
+      <img alt="" src="assets/mid_1080p/006-001.png" class="ringc--ring" id="s006-001"/>
+      <img alt="" src="assets/mid_1080p/006-000.png" class="ringc--circle" id="s006-000"/>
     </a>
     
-    <div class="ringc" id="s007"  tabindex="40">
-      <h3 class="ringc--heading" id="s007-h">Contact</h3>
-      <img src="assets/mid_1080p/007-001.png" class="ringc--ring" id="s007-001"/>
-      <img src="assets/mid_1080p/007-000.png" class="ringc--circle" id="s007-000"/>
-      <a class="ringc--link" id="s007-email" href="mailto:chloe.elowen@gmail.com" tabindex="50">chloe.elowen@gmail.com</a>
-      <a class="ringc--link" id="s007-gh" href="https://github.com/chloehp" tabindex="60" aria-label="My GitHub"><img src="assets/github-mark.svg" alt="GitHub logo"/></a>
+    <div class="ringc" id="s007">
+      <h3 class="ringc--heading" id="s007-h" style="font-family: 'YesevaOne', serif;">Contact</h3>
+      <img alt="" src="assets/mid_1080p/007-001.png" class="ringc--ring" id="s007-001"/>
+      <img alt="" src="assets/mid_1080p/007-000.png" class="ringc--circle" id="s007-000"/>
+      <a class="ringc--link" id="s007-email" href="mailto:chloe.elowen@gmail.com" tabindex>chloe.elowen@gmail.com</a>
+      <a class="ringc--link" id="s007-gh" href="https://github.com/chloehp" tabindex aria-label="My GitHub"><img alt="GitHub logo" src="assets/github-mark.svg" alt="GitHub logo"/></a>
     </div>
         
-    <img src="assets/mid_1080p/borderleft.png" id="borderleft"/>
-    <img src="assets/mid_1080p/borderright.png" id="borderright"/>
+    <img alt="" src="assets/mid_1080p/borderleft.png" id="borderleft"/>
+    <img alt="" src="assets/mid_1080p/borderright.png" id="borderright"/>
   </div>
   
   <script  src="./script.js"></script>

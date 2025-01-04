@@ -13,33 +13,48 @@
 <body>
 	<div class="baseless">
     
-    <h1 class="top-text" id="toptext-centre" tabindex="10">
-      <div class="top-dec top-dec-l"><img class="top-dec--sp1" src="../assets/spiral1.svg"/><img class="top-dec--sp2" src="../assets/spiral1.svg"/></div>
+    <h1 class="top-text" id="toptext-centre">
+      <div class="top-dec top-dec-l"><img alt="" class="top-dec--sp1" src="../assets/spiral1.svg"/><img alt="" class="top-dec--sp2" src="../assets/spiral1.svg"/></div>
       Chloe Elowen
-      <div class="top-dec"><img class="top-dec--sp1" src="../assets/spiral1.svg"/><img class="top-dec--sp2" src="../assets/spiral1.svg"/></div>
+      <div class="top-dec"><img alt="" class="top-dec--sp1" src="../assets/spiral1.svg"/><img alt="" class="top-dec--sp2" src="../assets/spiral1.svg"/></div>
     </h1>
     <h2 class="top-text" id="toptext-left">Designer</h2>
     <h2 class="top-text" id="toptext-right">Developer</h2>
     
     <div class="pagey">
-      <div class="content">
-        <img class="content--spiral spiral-tl" src="../assets/spiral2.svg"/><img class="content--spiral spiral-tr" src="../assets/spiral2.svg"/>
-        <img class="content--spiral spiral-bl" src="../assets/spiral2.svg"/><img class="content--spiral spiral-br" src="../assets/spiral2.svg"/>
+      <div class="content flexwrap">
+        <img alt="" class="content--spiral spiral-tl" src="../assets/spiral2.svg"/><img alt="" class="content--spiral spiral-tr" src="../assets/spiral2.svg"/>
+        <img alt="" class="content--spiral spiral-bl" src="../assets/spiral2.svg"/><img alt="" class="content--spiral spiral-br" src="../assets/spiral2.svg"/>
+
+        <div class="content--column"></div>
+        <div class="content--column"></div>
+
+        <div class="content--dblcolumn flexwrap">
+          <div class="content--element" id="tiktok-iframe">
+            <p>TikTok embed loading</p>          
+            <iframe sandbox title="My TikTok account" src="https://www.tiktok.com/embed/@chloe_elowen?lang=en" onload="hasTiktokEmbedLoaded = true"></iframe>
+          </div>
+          
+          <div class="content--dblcolumn"></div>
+          <div class="content--dblcolumn"></div>
+        </div>
+
       </div>
     </div>
 
-    <a class="ringc" tabindex="30" href="../" aria-label="Art and Design">
+    <a class="ringc" tabindex href="../" aria-label="Back to landing page">
       <h3 class="ringc--heading" id="s006-h">Art & <br>Design</h3>
-      <img src="../assets/mid_1080p/006-001.png" class="ringc--ring" id="s006-001"/>
-      <img src="../assets/mid_1080p/006-000.png" class="ringc--circle" id="s006-000"/>
+      <img alt="" src="../assets/mid_1080p/006-001.png" class="ringc--ring" id="s006-001"/>
+      <img alt="" src="../assets/mid_1080p/006-000.png" class="ringc--circle" id="s006-000"/> 
     </a>
 
         
-    <img src="../assets/mid_1080p/bottom.png" id="bottom"/>
+    <img alt="" src="../assets/mid_1080p/bottom.png" id="bottom"/>
     <div id="borderleft"></div>
     <div id="borderright"></div>
   </div>
 
   <script  src="./script.js"></script>
+  <script  src="../global.js"></script>
 </body>
 </html>

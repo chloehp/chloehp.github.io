@@ -16,7 +16,10 @@
 #s006-000 {transition: opacity 900ms;}
 .ringc:hover #s006-000 {opacity: 0.9 !important;}
 #s006-001 {transition: rotate 2100ms;}
-#s006-h {visibility: hidden;}
+#s006-h {opacity: 0;}
+
+.content {background-color: #d0dcc6;}
+.content--element {border: #7da49a 6px inset;}
 
 #bottom {
     display: block;
@@ -32,7 +35,7 @@
 @media (min-width: 1260px) {
     #borderleft, #borderright {
         background-image: url(../assets/mid_1080p/filigree2.png);
-        background-size: 9vw;
+        background-size: 150px;
         background-repeat: space;
         background-position: top center;
         height: 100%;
@@ -43,4 +46,35 @@
         scale: -1;
         background-position: bottom center;
     }
+}
+
+#tiktok-iframe {
+    display: none;
+    @media (min-width: 720px) {   
+        display: block;
+        position: relative;
+        flex: 50%;
+        height: 500px;
+    }
+}
+/*
+#tiktok-iframe iframe {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+    */
+#tiktok-iframe p {
+    position: absolute;
+    left: 0; top: 37.5%;
+    width: 100%;
+    color: #3d3223;
+    font-family: 'GrandifloraOne', serif;  
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    animation: pulse 1200ms ease-in-out alternate 1200ms infinite;
+}
+#tiktok-iframe iframe {
+    position: absolute;
+    width: 100%; height: 100%;
 }
