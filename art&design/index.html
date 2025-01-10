@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Chloe Elowen</title>
+  <title>Chloe Elowen - Art & Design</title>
   <link rel="icon" type="image/x-icon" href="../assets/mid_1080p/filigree2.png">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../utils.css">
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./style.css">
   <meta name="viewport" content="width=device-width">
 </head>
-<body>
+<body onscroll="loadArtElements()">
 	<div class="baseless">
     
     <h1 class="top-text" id="toptext-centre">
@@ -22,39 +22,48 @@
     <h2 class="top-text" id="toptext-right">Developer</h2>
     
     <div class="pagey">
-      <div class="content flexwrap">
+      <div class="content--container">
         <img alt="" class="content--spiral spiral-tl" src="../assets/spiral2.svg"/><img alt="" class="content--spiral spiral-tr" src="../assets/spiral2.svg"/>
         <img alt="" class="content--spiral spiral-bl" src="../assets/spiral2.svg"/><img alt="" class="content--spiral spiral-br" src="../assets/spiral2.svg"/>
 
-        <div class="content--column"></div>
-        <div class="content--column"></div>
+        <div class="content flexwrap">
 
-        <div class="content--dblcolumn flexwrap">
-          <div class="content--element" id="tiktok-iframe">
-            <p>TikTok embed loading</p>          
-            <iframe sandbox title="My TikTok account" src="https://www.tiktok.com/embed/@chloe_elowen?lang=en" onload="hasTiktokEmbedLoaded = true"></iframe>
+          <div class="content--column flexwrap" id="sketchbook-column">
+            <h4 class="content--subtitle">My Sketchbook</h4>
+            <div class="content--load-here"></div>          
+            <div class="content--load-here"></div>
           </div>
-          
-          <div class="content--dblcolumn"></div>
-          <div class="content--dblcolumn"></div>
-        </div>
 
+          <div class="content--column flexwrap" id="everything-else-column">
+
+            <div class="content--element" id="tiktok-iframe">
+              <p>TikTok embed loading</p>          
+              <!--<iframe sandbox title="My TikTok account" src="https://www.tiktok.com/embed/@chloe_elowen?lang=en" onload="hasTiktokEmbedLoaded = true"></iframe>-->
+            </div>
+            <h4 class="content--subtitle">Everything else</h4>
+            
+            <div class="content--load-here"></div>          
+            <div class="content--load-here"></div>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <a class="ringc" tabindex href="../" aria-label="Back to landing page">
+    <a class="ringc" tabindex href="../" aria-label="Go back to my landing page">
       <h3 class="ringc--heading" id="s006-h">Art & <br>Design</h3>
       <img alt="" src="../assets/mid_1080p/006-001.png" class="ringc--ring" id="s006-001"/>
       <img alt="" src="../assets/mid_1080p/006-000.png" class="ringc--circle" id="s006-000"/> 
     </a>
 
         
-    <img alt="" src="../assets/mid_1080p/bottom.png" id="bottom"/>
     <div id="borderleft"></div>
     <div id="borderright"></div>
+    <img alt="" src="../assets/mid_1080p/bottom.png" id="bottom"/>
   </div>
 
   <script  src="./script.js"></script>
+  <script  src="./artlist.js"></script>
   <script  src="../global.js"></script>
 </body>
 </html>

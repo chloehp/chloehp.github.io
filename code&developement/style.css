@@ -1,9 +1,11 @@
+
+
 .top-text {background: none !important;}
 .ringc {    
     left: 49.8%; top: 21%; width: 84%;
     z-index: 15;
     @media (min-width: 720px) {        
-        left: 49.8%; top: 19%; width: 30%;;
+        left: 32.1%; top: 19%; width: 30%;;
     }
 }
 .ringc--heading {    
@@ -16,13 +18,45 @@
 #s005-000 {transition: opacity 900ms;}
 .ringc:hover #s005-000 {opacity: 0.9 !important;}
 #s005-001 {transition: rotate 2100ms;}
-#s005-h {visibility: hidden;}
+#s005-h {opacity: 0;}
+
+.content--container {border: #3d3223af 1px solid;}
+.content {background-color: #e7c4ad;}
+.content--load-here {
+    flex: 100%;
+    max-width: 100%;
+}
+.content--element {
+    position: relative;
+    border: #3d322396 1px solid;
+    height: 120px;
+    padding: 3%;
+    color: #3d3223;
+}
+.content--element:hover {
+    background-color: #3d3223;
+    color: #e7c4ad;
+}
+.content--element img {
+    position: absolute;
+    border: #3d322396 1px solid;
+    top: 6px; left: 6px;
+    height: 108px; aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.content--element h5, p {
+    margin: auto;
+    margin-left: 114px;
+    width: calc(100% - 114px);
+    text-align: center;
+}
 
 #bottom {
     display: block;
     position: absolute;
     left: -1%; bottom: 0;
-    width: 102%;
+    width: 102%;      
+    z-index: 30;
     @media (min-width: 720px) {   
         left: 13.48%; bottom: 3%;
         width: 73.2%;
@@ -32,12 +66,11 @@
 @media (min-width: 1260px) {
     #borderleft, #borderright {
         background-image: url(../assets/mid_1080p/filigree2.png);
-        background-size: 9vw;
+        background-size: 111px;
         background-repeat: space;
         background-position: top center;
         height: 100%;
         top: 7.75%;
-        opacity: 0.72;
     }
     #borderleft {
         scale: -1;

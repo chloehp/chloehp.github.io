@@ -1,4 +1,4 @@
-//elements
+// elements
 let rightring;
 let leftring;
 let circle;
