@@ -83,4 +83,19 @@ const artList = [
         desc: "",
         cat: "sketchbook",
     },
+    
+    {
+        thumb: "../art/witch-tools/thumb.jpg",
+        url: "",
+        title: "Witch Tools",
+        desc: "",
+        cat: "",
+    },
+    {
+        thumb: "../art/albitecita/thumb.jpg",
+        url: "../art/albitecita/",
+        title: "Albitecita",
+        desc: "",
+        cat: "",
+    },
 ];
