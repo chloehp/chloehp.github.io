@@ -30,13 +30,12 @@ function loadElement(from, cat, into, onlyImg) {
             const img = document.createElement("img");
             const h5 = document.createElement("h5");
             const p = document.createElement("p");
-         
-            el.setAttribute("href", from[i].url)  
+
             el.setAttribute("class", "content--element  " + from[i].cat);        // set attributes
+            el.setAttribute("href", from[i].url);
             el.setAttribute("target", "_blank");
             img.setAttribute("alt", from[i].title + " thumbnail");
-            if (from[i].thumb) {img.setAttribute("src", from[i].thumb)}
-            else {img.setAttribute("src", from[i].url)} 
+            img.setAttribute("src", from[i].thumb);
             h5.innerHTML = from[i].title;
             p.innerHTML = from[i].desc;
 

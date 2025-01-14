@@ -40,7 +40,6 @@
 .content--element img {
     position: absolute;
     border: #3d322396 1px solid;
-    background-color: #ece5d6;
     top: 6px; left: 6px;
     height: 108px; aspect-ratio: 1/1;
     object-fit: cover;
@@ -66,7 +65,7 @@
 
 @media (min-width: 1260px) {
     #borderleft, #borderright {
-        background-image: url(../assets/mid_1080p/filigree2.png);
+        background-image: url(../assets/mid_1080p/filigree2.webp);
         background-size: 111px;
         background-repeat: space;
         background-position: top center;

@@ -18,7 +18,7 @@ document.onreadystatechange = function () {
         setTimeout(function(){
             //console.log(tiktok.children[1].contentWindow.postMessage.name);
             if (hasTiktokEmbedLoaded !== true) {
-                tiktok.children[0].innerHTML = "Failed to load.";
+                tiktok.children[0].innerHTML = "Failed to load TikTok embed. <br>Double click to open in a new tab.";
                 //setTimeout(vanishElement, 900, tiktok);
             }
             else {

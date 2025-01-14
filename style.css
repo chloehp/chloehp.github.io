@@ -30,7 +30,7 @@
 
 .base {
   @media (min-width: 720px) {
-    background-image: url(assets/mid_1080p/base.jpg);
+    background-image: url(assets/mid_1080p/base.webp);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center 15%;
@@ -166,7 +166,7 @@
   aspect-ratio: 1/1;
   
   @media (min-width: 720px) {
-    left: 49.8%; top: 24.6%; width: 32%;
+    left: 49.87%; top: 24.8%; width: 32%;
   }
 }
 
