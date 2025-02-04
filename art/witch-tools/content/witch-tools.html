@@ -1,0 +1,148 @@
+﻿<!--<div id="loader"></div>-->
+<div id="intro">
+    
+    <div id="intro-leaves-left">
+        <img alt="fallen leaves" src="assets/img/leaves/leafcomp.webp" class="intro-leaves--5" loading="eager"/>
+        <img alt="fallen leaves" src="assets/img/leaves/leafcomp.webp" class="intro-leaves--4" loading="eager"/>
+        <div class="intro-leaves intro-leaves--1a">
+            <div class="intro-leaf leaf001"></div>            <div class="intro-leaf leaf003"></div>            <div class="intro-leaf leaf005"></div>            <div class="intro-leaf leaf007"></div>            <div class="intro-leaf leaf009"></div>            <div class="intro-leaf leaf011"></div>            <div class="intro-leaf leaf013"></div>
+        </div>
+        <div class="intro-leaves intro-leaves--1b">
+            <div class="intro-leaf leaf002"></div>  <div class="intro-leaf leaf004">    </div><div class="intro-leaf leaf006"></div>    <div class="intro-leaf leaf008"></div>  <div class="intro-leaf leaf010"></div><div class="intro-leaf leaf012"></div><div class="intro-leaf leaf014"></div>
+        </div>
+        <div class="intro-leaves intro-leaves--2">
+            <div class="intro-leaf leaf015"></div>            <div class="intro-leaf leaf016"></div>            <div class="intro-leaf leaf017"></div>            <div class="intro-leaf leaf018"></div>            <div class="intro-leaf leaf019"></div>            <div class="intro-leaf leaf020"></div>            <div class="intro-leaf leaf021"></div>            <div class="intro-leaf leaf022"></div>            <div class="intro-leaf leaf023"></div>            <div class="intro-leaf leaf024"></div>            <div class="intro-leaf leaf025"></div>            <div class="intro-leaf leaf026"></div>            <div class="intro-leaf leaf027"></div>            <div class="intro-leaf leaf028"></div>
+        </div>
+        <div class="intro-leaves intro-leaves--3">
+            <div class="intro-leaf leaf301"></div>            <div class="intro-leaf leaf302"></div>            <div class="intro-leaf leaf303"></div>            <div class="intro-leaf leaf304"></div>            <div class="intro-leaf leaf305"></div>            <div class="intro-leaf leaf306"></div>            <div class="intro-leaf leaf307"></div>            <div class="intro-leaf leaf308"></div>            <div class="intro-leaf leaf309"></div>            <div class="intro-leaf leaf310"></div>            <div class="intro-leaf leaf311"></div>            <div class="intro-leaf leaf312"></div>            <div class="intro-leaf leaf313"></div>            <div class="intro-leaf leaf314"></div>
+        </div>
+    </div>
+    <div id="intro-leaves-right">
+        <img alt="fallen leaves" src="assets/img/leaves/leafcomp.webp" class="intro-leaves--5" loading="eager"/>
+        <img alt="fallen leaves" src="assets/img/leaves/leafcomp.webp" class="intro-leaves--4" loading="eager"/>
+        <div class="intro-leaves intro-leaves--1a">
+            <div class="intro-leaf leaf001"></div>            <div class="intro-leaf leaf003"></div>            <div class="intro-leaf leaf005"></div>            <div class="intro-leaf leaf007"></div>            <div class="intro-leaf leaf009"></div>            <div class="intro-leaf leaf011"></div>            <div class="intro-leaf leaf013"></div>
+        </div>
+        <div class="intro-leaves intro-leaves--1b">
+            <div class="intro-leaf leaf002"></div>  <div class="intro-leaf leaf004">    </div><div class="intro-leaf leaf006"></div>    <div class="intro-leaf leaf008"></div>  <div class="intro-leaf leaf010"></div><div class="intro-leaf leaf012"></div><div class="intro-leaf leaf014"></div>
+        </div>
+        <div class="intro-leaves intro-leaves--2">
+            <div class="intro-leaf leaf015"></div>            <div class="intro-leaf leaf016"></div>            <div class="intro-leaf leaf017"></div>            <div class="intro-leaf leaf018"></div>            <div class="intro-leaf leaf019"></div>            <div class="intro-leaf leaf020"></div>            <div class="intro-leaf leaf021"></div>            <div class="intro-leaf leaf022"></div>            <div class="intro-leaf leaf023"></div>            <div class="intro-leaf leaf024"></div>            <div class="intro-leaf leaf025"></div>            <div class="intro-leaf leaf026"></div>            <div class="intro-leaf leaf027"></div>            <div class="intro-leaf leaf028"></div>
+        </div>
+        <div class="intro-leaves intro-leaves--3">
+            <div class="intro-leaf leaf301"></div>            <div class="intro-leaf leaf302"></div>            <div class="intro-leaf leaf303"></div>            <div class="intro-leaf leaf304"></div>            <div class="intro-leaf leaf305"></div>            <div class="intro-leaf leaf306"></div>            <div class="intro-leaf leaf307"></div>            <div class="intro-leaf leaf308"></div>            <div class="intro-leaf leaf309"></div>            <div class="intro-leaf leaf310"></div>            <div class="intro-leaf leaf311"></div>            <div class="intro-leaf leaf312"></div>            <div class="intro-leaf leaf313"></div>            <div class="intro-leaf leaf314"></div>
+        </div>
+    </div>
+    <div id="begin">
+        <!--<h1>Witch Tools</h1>-->
+        <!--<img alt="Witch Tools" src="assets/img/witch-tools.webp"/>-->
+        <p>
+            Enter now, <br>you budding Pellar<br>
+            Find these tools of <br>luck and stellar<br>
+            Be careful, <br>do what's right<br>
+            Find your answers <br>'ere this night.
+        </p>
+        <button onclick="scens.start()">Begin</button>
+        <a href="./credits.html" target="_blank">Credits</a>
+    </div>
+
+    <div id="tv-set" class="tv-set">
+        <div id="home-screen" class="tv-set--screen">
+            <div onclick="knockOnTheConsole()" id="styleconsole" class="console"></div>	
+            <div onclick="scary()" id="witch"></div>
+
+            <div class="btn" id="buttons-home">
+                <button onclick="displayAstro(true)" onmouseenter="styleConsole('Find the position of the planets in your online Orrery.')">Orrery</button>
+                <button onclick="openOrCloseWheel(true)"  onmouseenter="styleConsole('Read your tarot on the wheel of fortune.')">Wheel</button>
+                <button onclick="">???</button>
+                <button onclick="">???</button>
+                <button onclick="">???</button>
+                <button onclick="">???</button>
+            </div>
+            <div class="btn" id="buttons-wheel">
+                <div id="wheel-card-holder"></div>
+                <button onclick="openOrCloseWheel(false)">Exit</button>
+            </div>
+            <div class="btn" id="buttons-astro">
+                <button aria-label="increase selected day" class="btn--dbut r180" onclick="selectDate(1, 0, 0)">V</button>
+                <button aria-label="increase selected month" class="btn--dbut r180" onclick="selectDate(0, 1, 0)">V</button>
+                <button aria-label="increase selected year" class="btn--dbut r180" onclick="selectDate(0, 0, 1)">V</button>
+                <p class="btn--date"></p> <p class="btn--date"></p> <p class="btn--date"></p>
+                <button aria-label="decrease selected day" class="btn--dbut" onclick="selectDate(-1, 0, 0)">V</button>
+                <button aria-label="decrease selected month" class="btn--dbut" onclick="selectDate(0, -1, 0)">V</button>
+                <button aria-label="decrease selected year" class="btn--dbut" onclick="selectDate(0, 0, -1)">V</button>
+                <button onclick="astro(selectedDate)">Go</button>
+                <button onclick="displayAstro(false)">Exit</button>
+            </div>
+        </div>
+        <div class="fuzz fuzz--in" id="tv-fuzz"></div>
+        <div id="off-screen" class="tv-set--screen"></div>
+        <img alt="Old CRT TV, there are interactive buttons in the screen" class="tv-set--tv" src="assets/img/Witchsubishi-Woodgrain.webp" />
+        <p id="cabletxt"></p>
+        <img alt="" class="tv-set--cable" src="assets/img/cable.webp" />
+        <div class="tv-set--chnl">
+            <button onclick="cable(event)" style="left: 10.5%; top: 11%;">1</button>    <button onclick="cable(event)" style="left: 31%; top: 10%;">2</button>  <button onclick="cable(event)" style="left: 52%; top: 9%;" >3</button>  <button onclick="cablePower()" style="left: 76%; top: 9%;"></button>
+            <button onclick="cable(event)" style="left: 10.5%; top: 31%;">4</button>    <button onclick="cable(event)" style="left: 31%; top: 30%;">5</button>  <button onclick="cable(event)" style="left: 52%; top: 29%;">6</button>
+            <button onclick="cable(event)" style="left: 10.5%; top: 51%;">7</button>    <button onclick="cable(event)" style="left: 31%; top: 50%;">8</button>  <button onclick="cable(event)" style="left: 52%; top: 49%;">9</button> 
+                                                                                        <button onclick="cable(event)" style="left: 31%; top: 70%;">0</button>                                                                          <button onclick="cableMute()" style="left: 76%; top: 69%;"></button>
+        </div>
+    </div>	
+
+    <div id="wheel-arrow"></div>
+	<div id="spinning-wheel" onclick="spinWheel()">
+        <div class="s-wheel-clone">
+            <div class="s-wheel-clone--card"></div>
+            <div class="s-wheel-clone--iron"></div>
+        </div>
+    </div>
+
+    <div id="astro-pendulum">
+        <div id="astro-chain"></div>
+        <div id="astro">
+        <!--Remember, first sub-element of 'ast-elem's will be counter-rotated-->
+            <div class="ast-elem" id="SaturnElement">
+                <img alt="Saturn" class="ast-elem--symbol" src="assets/img/astro/Saturn_symbol.svg" onclick="styleConsole('This is Saturn')" />
+                <div class="ast-elem--stake"></div>
+            </div>
+            <div class="ast-elem" id="JupiterElement">
+                <img alt="Jupiter" class="ast-elem--symbol" src="assets/img/astro/Jupiter_symbol.svg"  onclick="styleConsole('This is Jupiter')"/>
+                <div class="ast-elem--stake"></div>
+            </div>
+            <div class="ast-elem" id="CeresElement">
+                <img alt="Ceres" class="ast-elem--symbol" src="assets/img/astro/Ceres_symbol.svg"  onclick="styleConsole('This is Ceres')"/>
+                <div class="ast-elem ast-elem--ring"></div>
+            </div>
+            <div class="ast-elem" id="MarsElement">
+                <img alt="Mars" class="ast-elem--symbol" src="assets/img/astro/Mars_symbol.svg"  onclick="styleConsole('This is Mars')"/>
+                <div class="ast-elem ast-elem--ring"></div>
+                <div class="ast-elem--tooth" id="MarsTooth"></div>
+            </div>
+            <div class="ast-elem" id="EarthElement">
+                <div class="ast-elem--ring">                
+                    <div class="ast-elem" id="MoonElement">
+                        <img alt="Moon" class="ast-elem--symbol" src="assets/img/astro/Moon_symbol.svg"  onclick="styleConsole('This is our Moon')"/>         
+                        <div class="ast-elem--tooth" id="MoonTooth"></div>
+                    </div>
+                    <img alt="Earth" class="ast-elem--symbol" src="assets/img/astro/Earth_symbol.svg"  onclick="styleConsole('This is Earth')"/>
+                </div>
+            </div>
+            <div class="ast-elem" id="VenusElement">
+                <img alt="Venus" class="ast-elem--symbol" src="assets/img/astro/Venus_symbol.svg"  onclick="styleConsole('This is Venus')"/>
+                <div class="ast-elem ast-elem--ring"></div>
+                <div class="ast-elem--tooth" id="VenusTooth"></div>
+            </div>
+            <div class="ast-elem" id="MercuryElement">
+                <img alt="Mercury" class="ast-elem--symbol" src="assets/img/astro/Mercury_symbol.svg"  onclick="styleConsole('This is Mercury')"/>
+                <div class="ast-elem ast-elem--ring"></div>
+            </div>
+            <div class="ast-elem" id="SunElement" onclick="styleConsole('This is our Sun')">
+                <div class="ast-elem ast-elem--ring"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="click-block"></div>
+</div>
+
+<script>
+</script>
