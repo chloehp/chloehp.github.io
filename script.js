@@ -23,6 +23,7 @@ document.onreadystatechange = function () {
         setTimeout(function(){
             loady.remove();
             loadyText.remove();
+            flip();
         }, 1800);
     }
 }
@@ -46,8 +47,8 @@ function scrollUpdate() {
 }
 
 let flipDegrees = 0;
-function flip(event) {
-    const flipElement = event.currentTarget;
+function flip() {
+    const flipElement = document.getElementById("flip");
     flipElement.style.transformStyle = "preserve-3d";                   // add only when animating as makes it slightly blurry
     flipDegrees += 540;
     flipElement.style.transform = "rotateY(" + flipDegrees + "deg)";
