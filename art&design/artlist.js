@@ -86,7 +86,7 @@ const artList = [
     
     {
         thumb: "../art/witch-tools/thumb.jpg",
-        url: "",
+        url: "../art/witch-tools/",
         title: "Witch Tools",
         desc: "",
         cat: "",

@@ -2782,7 +2782,7 @@ function mixPotions(ing1 = 0, ing2 = 1) {
     //document.getElementById("styleconsole").style.backgroundColor = ("rgb(" + mergeRGB[0] + ", " + mergeRGB[1] + ", " + mergeRGB[2] + ")")
 }
 
-let skipIntro = true;                                                                  // to skip the intro animation, set true
+let skipIntro = false;                                                                  // to skip the intro animation, set true
 const scens = {
     start : function() {
         styleConsole("Loading . . . ");        
