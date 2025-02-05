@@ -7,17 +7,14 @@ document.onreadystatechange = function () {
     if (document.readyState === "complete") {
         const loady = document.getElementById("loady");
         const loadyText = document.getElementById("loady-text");
-        circle = document.querySelectorAll(".ringc--circle");
-        document.getElementById("toptext-centre").scrollIntoView(true);    
+        circle = document.querySelectorAll(".ringc--circle"); 
         document.getElementById("s008-000-l").remove(); 
-
         rightring = document.getElementById("s006-001");
         leftring = document.getElementById("s005-001");
 
         loady.style.scale = 1;
         loadyText.style.color = "#6cac8500";
-        document.body.style.backgroundColor = "#f1dbbf";
-        document.getElementById("toptext-centre").scrollIntoView(true);     
+        document.body.style.backgroundColor = "#f1dbbf"; 
         setInterval(scrollUpdate, 120);
 
         setTimeout(function(){
@@ -28,6 +25,7 @@ document.onreadystatechange = function () {
     }
 }
 
+let flipped = false;
 function scrollUpdate() {
     const docScroll = document.documentElement.scrollTop;
     const scrolled = docScroll / (6 + (screen.width / 150));    
@@ -38,6 +36,7 @@ function scrollUpdate() {
         circle[0].style.opacity = "0.3";
         circle[1].style.opacity = "0.3";
         circle[2].style.opacity = "0.3";
+        if (flipped === true) flip();
     }
     else {
         circle[0].style.opacity = "";
@@ -49,12 +48,25 @@ function scrollUpdate() {
 let flipDegrees = 0;
 function flip() {
     const flipElement = document.getElementById("flip");
+    const introElement = document.getElementById("intro");
     flipElement.style.transformStyle = "preserve-3d";                   // add only when animating as makes it slightly blurry
     flipDegrees += 540;
     flipElement.style.transform = "rotateY(" + flipDegrees + "deg)";
     console.log("flip to " + flipDegrees);
+
+    if (flipped === false) {
+        document.getElementById("toptext-centre").scrollIntoView(true);    
+        introElement.style.opacity = "1";
+        introElement.style.visibility = "visible"
+        flipped = true;
+    }
+    else {
+        introElement.style.opacity = "";
+        introElement.style.visibility = ""
+        flipped = false;
+    }
     
-    const recordFlipDegrees = flipDegrees
+    const recordFlipDegrees = flipDegrees;
     setTimeout(function(){
         if (flipDegrees > recordFlipDegrees + 5400) pew(flipElement);   // if clicked like 10 times in 3 seconds, pew
     }, 3000);

@@ -35,7 +35,10 @@ function loadElement(from, cat, into, onlyImg) {
             el.setAttribute("href", from[i].url);
             el.setAttribute("target", "_blank");
             img.setAttribute("alt", from[i].title + " thumbnail");
-            img.setAttribute("src", from[i].thumb);
+
+            if (from[i].thumb) {img.setAttribute("src", from[i].thumb)}
+            else {img.setAttribute("src", from[i].url)}
+            
             h5.innerHTML = from[i].title;
             p.innerHTML = from[i].desc;
 

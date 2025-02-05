@@ -17,7 +17,7 @@ const codeList = [
         thumb: "../art/witch-tools/thumb.jpg",
         url: "../art/witch-tools/",
         title: "Witch tools",
-        desc: "Tools for the witch",
+        desc: "Interactive art project. You are a witch who has Tools for the witch",
         cat: "js",
     },
 ];

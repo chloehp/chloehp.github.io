@@ -45,8 +45,12 @@ h5 {
 p {    
     font-family: 'GrandifloraOne';
     font-weight: bold;
-    font-size: 24px;
-    line-height: 27px;
+    font-size: 18px;
+    line-height: 21px;
+    @media (min-width: 720px) {
+        font-size: 24px;
+        line-height: 27px;
+    }
 }
 
 body {
