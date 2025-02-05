@@ -40,8 +40,8 @@ function loadArtElements() {
         const everythingColumn = document.getElementById("everything-else-column");
         artElementsHaveBeenLoaded = true;
         setTimeout(function(){
-            loadElement(artList, "sketchbook", sketchbookColumn);
             loadElement(artList, "", everythingColumn);
+            loadElement(artList, "sketchbook", sketchbookColumn);
         }, 600);
     }
 }

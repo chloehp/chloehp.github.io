@@ -14,7 +14,7 @@ function appirateElement(el) {
 }
 
 //const haveIloaded = [];
-function loadElement(from, cat, into, onlyImg) {
+function loadElement(from, cat, into) {
     const fromLen = from.length;
     const columns = into.querySelectorAll(".content--load-here");
     let columnIndex = 0;

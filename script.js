@@ -4,6 +4,7 @@ let leftring;
 let circle;
 
 document.onreadystatechange = function () {
+    document.getElementById("toptext-centre").scrollIntoView(true);   
     if (document.readyState === "complete") {
         const loady = document.getElementById("loady");
         const loadyText = document.getElementById("loady-text");

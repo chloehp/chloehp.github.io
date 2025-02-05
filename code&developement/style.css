@@ -29,7 +29,7 @@
 .content--element {
     position: relative;
     border: #3d322396 1px solid;
-    height: 120px;
+    min-height: 120px;
     padding: 3%;
     color: #3d3223;
 }

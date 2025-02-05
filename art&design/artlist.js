@@ -85,7 +85,7 @@ const artList = [
     },
     
     {
-        thumb: "../art/witch-tools/thumb.jpg",
+        thumb: "../art/witch-tools/thumb.webp",
         url: "../art/witch-tools/",
         title: "Witch Tools",
         desc: "",
@@ -95,6 +95,20 @@ const artList = [
         thumb: "../art/albitecita/thumb.jpg",
         url: "../art/albitecita/",
         title: "Albitecita",
+        desc: "",
+        cat: "",
+    },
+    {
+        thumb: "../art/spriggan-thumbnail.webp",
+        url: "https://youtu.be/dBWXoE5ANZQ",
+        title: "Spriggan - The fairy villian of Penwith Folklore",
+        desc: "The protector of ancient cairns and barrows of the ancient Cornish moorland, the evil ghosts of giants that haunt the stones. The Spriggan is a mythical Piskie creature from Penwith, Cornwall. THIS IS MY ART PROJECT FOR THIS WEEK OK THANKS",
+        cat: "",
+    },
+    {
+        thumb: "../art/albitecita/creature-thumb.webp",
+        url: "https://youtube.com/shorts/lzBRYMiQkW0?feature=share",
+        title: "A creature looking through your window",
         desc: "",
         cat: "",
     },
