@@ -50,11 +50,15 @@ function circle() {
     console.log("circle");
     circleSize++;
     if (circleSize > 4) {
-        circleSize = 1;
+        circleSize = 0;
     }
     switch (circleSize) {
         default:
-            document.getElementById("circle").style.animation = "small 2s forwards";
+            document.getElementById("circle").style.animation = "small 1s forwards";
+            console.log("go small");
+            break;
+        case 1:
+            document.getElementById("circle").style.animation = "fade-out 0.5s reverse forwards";
             console.log("go small");
             break;
         case 2:

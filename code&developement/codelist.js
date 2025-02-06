@@ -7,10 +7,10 @@ const codeList = [
         cat: "js",
     },
     {
-        thumb: "../assets/mid_1080p/filigree2.webp",
-        url: "",
+        thumb: "../tools/colour-light/icon.png",
+        url: "../tools/colour-light",
         title: "Colour light",
-        desc: "",
+        desc: "Use a screen as customisable ring light",
         cat: "js",
     },
     {
@@ -25,6 +25,20 @@ const codeList = [
         url: "https://chloe-elowen.netlify.app/",
         title: "Wordpress portfolio site",
         desc: "My Wordpress site I used for my portfolio around 2022.",
+        cat: "",
+    },
+    {
+        thumb: "../art/monopoly.png",
+        url: "https://github.com/chloehp/Monopoly",
+        title: "Monopoly",
+        desc: "Console app written in C# based on a simplified Monopoly game.",
+        cat: "",
+    },
+    {
+        thumb: "../assets/mid_1080p/filigree2.webp",
+        url: "https://github.com/chloehp/Csharp-minis",
+        title: "C# mini projects",
+        desc: "A collection of small apps I've made for demo purposes",
         cat: "",
     },
 ];
