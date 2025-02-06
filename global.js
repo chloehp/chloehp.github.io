@@ -13,52 +13,51 @@ function appirateElement(el) {
     }, 300);
 }
 
-//const haveIloaded = [];
-function loadElement(from, cat, into) {
-    const fromLen = from.length;
-    const columns = into.querySelectorAll(".content--load-here");
-    let columnIndex = 0;
-    let elementsAppended = 0;
-
-    //haveIloaded.push(0);
-    //const thisIterationOfHaveIloaded = haveIloaded.length - 1;
-
-    let i = 0;
-    const thisInterval = setInterval(function () {
-        if (cat === from[i].cat) {
-            const el = document.createElement("a");
-            const img = document.createElement("img");
-            const h5 = document.createElement("h5");
-            const p = document.createElement("p");
-
-            el.setAttribute("class", "content--element  " + from[i].cat);        // set attributes
-            el.setAttribute("href", from[i].url);
-            el.setAttribute("target", "_blank");
-            img.setAttribute("alt", from[i].title + " thumbnail");
-
-            if (from[i].thumb) {img.setAttribute("src", from[i].thumb)}
-            else {img.setAttribute("src", from[i].url)}
-            
-            h5.innerHTML = from[i].title;
-            p.innerHTML = from[i].desc;
-
-            //img.setAttribute("onload", "haveIloaded[" + thisIterationOfHaveIloaded + "]++");    // when image loads, add 1 to the item of the array that represents this iteration of the loadElement function
-            el.appendChild(img);                                                // append img to element
-            el.appendChild(h5);                                                 // append h5 to element
-            el.appendChild(p);                                                  // append p to element
-
-            if (columnIndex >= columns.length) {columnIndex = 0}                // iterate through columns
-
-            columns[columnIndex].appendChild(el);                               // append element to next column
-            appirateElement(el);
-            columnIndex++;
-            elementsAppended++;
-            console.log(elementsAppended + " load " + from[i].title + " into " + into.id);
-        }        
-        
-        i++; 
-        if (i >= fromLen) {clearInterval(thisInterval)}
-    }, 180);
-
+function loadElement(from, cat, into, i = 0, columnIndex = 0) {    
+    if (from[i]) {                                                  // if next iteration exists, else loadElement loop ends
+        if (cat !== from[i].cat) {                                  // if category does not exist
+            loadElement(from, cat, into, i + 1, columnIndex + 1);    // skip this loop
+            return;
+        }
+        const newEl = createNewElement(from[i]);        
+        const columns = into.querySelectorAll(".content--load-here");
     
+        if (columnIndex >= columns.length) {columnIndex = 0}                // iterate through columns
+    
+        columns[columnIndex].appendChild(newEl);                               // append element to next column
+        appirateElement(newEl);
+        
+        console.log(from[i].title + " into " + into.id);
+        if ((i + 1) % 3 === 0) {                                                                    // every third time
+            console.log("waiting for last element to load...");
+            newEl.children[0].onload = function(){                                                  // wait for this image to load
+                setTimeout(function(){loadElement(from, cat, into, i + 1, columnIndex + 1)}, 180);  // before loading the next one
+            }; 
+        }
+        else {setTimeout(function(){loadElement(from, cat, into, i + 1, columnIndex + 1)}, 180)}    // else just wait 180 ms                      
+    } 
+}
+
+function createNewElement(from) {
+    const el = document.createElement("a");
+    const img = document.createElement("img");
+    const h5 = document.createElement("h5");
+    const p = document.createElement("p");
+    
+    el.setAttribute("class", "content--element  " + from.cat);        // set attributes
+    el.setAttribute("href", from.url);
+    el.setAttribute("target", "_blank");
+    img.setAttribute("alt", from.title + " thumbnail");
+
+    if (from.thumb) {img.setAttribute("src", from.thumb)}               // if object has thumbnail, set thumbnail
+    else {img.setAttribute("src", from.url)}                            // else use the url
+    
+    h5.innerHTML = from.title;
+    p.innerHTML = from.desc;
+
+    el.appendChild(img);                                                // append img to element
+    el.appendChild(h5);                                                 // append h5 to element
+    el.appendChild(p);                                                  // append p to element
+
+    return el;
 }

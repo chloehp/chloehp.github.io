@@ -50,15 +50,15 @@
 @media (min-width: 1260px) {
     #borderleft, #borderright {
         background-image: url(../assets/mid_1080p/filigree2.webp);
-        background-size: 111px;
-        background-repeat: space;
-        background-position: top center;
+        background-size: 120px;
+        background-repeat: repeat-y, space;
+        background-position: top left;
         height: 100%;
         top: 7.75%;
     }
     #borderleft {
         scale: -1;
-        background-position: bottom center;
+        background-position: bottom left;
     }
 }
 
