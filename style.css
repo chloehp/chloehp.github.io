@@ -140,8 +140,8 @@
   transition: opacity 450ms;
   z-index: 15;
   @media (min-width: 720px) {
-    font-size: 1.5vw;      
-    @media (min-width: 1920px) { font-size: 30px;}
+    font-size: 1.2vw;      
+    @media (min-width: 1920px) { font-size: 24px;}
   }
 }
 .ringc--link img {width: 100%;}

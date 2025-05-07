@@ -51,7 +51,12 @@
     #s007 {left: 50%;  top: 73.17%;  width: 99%;}
     #s007-email {top: 60%;}
     #s007-gh {
-        top: 75%; width: 15%;
+        top: 75%; left: 15%;
+        width: 15%;
+    }
+    #s007-in {
+        top: 75%; left: 70%;
+        width: 15%;
     }
 
     #bottom {
@@ -155,7 +160,12 @@
     #s007 {left: 50%;  top: 48.8%;  width: 28%;}
     #s007-email {top: 64%;}
     #s007-gh {
-        top: 77%; width: 12%;
+        top: 77%; left: 42%;
+        width: 12%;
+    }
+    #s007-in {
+        top: 77%; left: 58%;
+        width: 12%;
     }
     
     #borderleft {
