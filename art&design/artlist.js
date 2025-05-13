@@ -205,6 +205,13 @@ const artList = [
     },
     {
         thumb: "",
+        url: "../art/weddinginvite.webp",
+        title: "Wedding invite",
+        desc: "",
+        cat: "",
+    },
+    {
+        thumb: "",
         url: "../art/sketchbook/Untitled_Artwork+5(1).png",
         title: "Roller derby",
         desc: "",
@@ -215,6 +222,13 @@ const artList = [
         url: "https://youtu.be/dBWXoE5ANZQ",
         title: "Spriggan - The fairy villian of Penwith Folklore",
         desc: "The protector of ancient cairns and barrows of the ancient Cornish moorland, the evil ghosts of giants that haunt the stones. The Spriggan is a mythical Piskie creature from Penwith, Cornwall.",
+        cat: "",
+    },
+    {
+        thumb: "",
+        url: "../art/weddingmenufront.webp",
+        title: "Wedding menu",
+        desc: "",
         cat: "",
     },
     {

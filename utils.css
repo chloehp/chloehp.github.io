@@ -14,6 +14,21 @@
     from {rotate: 0deg;}
     to {rotate: 1080deg;}
 }
+@keyframes blink {
+    0% {opacity: 0;}
+
+    83% {opacity: 0;}
+    84% {opacity: 1;}
+    85% {opacity: 0;}  
+    
+    95% {opacity: 0;}
+    96% {opacity: 1;}
+    97% {opacity: 0;}
+
+    98% {opacity: 0;}
+    99% {opacity: 1;}
+    100% {opacity: 0;}
+}
 
 @font-face {
     font-family: 'GrandifloraOne';

@@ -193,6 +193,10 @@
 }
 .flip--back {transform: rotateY(180deg);}
 
+#eyes-blink {
+  animation: blink 6s steps(100, end) infinite;
+}
+
 .pagey {
   position: absolute;
   left: 0; top: 7.75%; 

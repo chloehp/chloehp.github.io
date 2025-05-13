@@ -20,6 +20,28 @@
 #s006-001 {transition: rotate 2100ms;}
 #s006-h {opacity: 0;}
 
+#left-ringc .ringc--circle { width: 60%; opacity: 1 !important; }
+#right-ringc .ringc--circle { width: 60%; opacity: 1 !important; }
+#left-ringc .ringc--ring { animation: spin 240s linear infinite; }
+#right-ringc .ringc--ring { animation: spin 240s linear infinite reverse; }
+
+#left-ringc {
+    display: none;
+    @media (min-width: 720px) {
+         display: block;
+         left: 21%;
+         clip-path: inset(0% 0% 0% 39%);
+    }
+}
+#right-ringc {
+    display: none;
+    @media (min-width: 720px) {
+         display: block;
+         left: 79%;
+         clip-path: inset(0% 39% 0% 0%);
+    }
+}
+
 .content {background-color: #d0dcc6;}
 .content--element {border: #7da49a 1px solid;}
 .content--element img {width: 100%;}
