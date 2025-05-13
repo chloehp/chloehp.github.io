@@ -46,10 +46,10 @@
     #s006-000 {width: 75.3%;}
     #s006 {left: 82%;  top: 51.22%;  width: 64%;}
 
-    #s007-000 {width: 78.7%;}
-    #s007-001 {animation: spin 120s linear infinite reverse;}
+    #s007-000 {width: 78.7%; pointer-events: none;}
+    #s007-001 {animation: spin 120s linear infinite reverse; pointer-events: none;}
     #s007 {left: 50%;  top: 73.17%;  width: 99%;}
-    #s007-email {top: 60%;}
+    #s007-email {top: 60%; font-weight: 900;}
     #s007-gh {
         top: 75%; left: 15%;
         width: 15%;
@@ -155,10 +155,10 @@
     #s006-000 {width: 75.3%;}
     #s006 {left: 73.9%;  top: 39.8%;  width: 25.5%;}
     
-    #s007-000 {width: 78.7%;}
-    #s007-001 {animation: spin 120s linear infinite reverse;}
+    #s007-000 {width: 78.7%; pointer-events: none;}
+    #s007-001 {animation: spin 120s linear infinite reverse; pointer-events: none;}
     #s007 {left: 50%;  top: 48.8%;  width: 28%;}
-    #s007-email {top: 64%;}
+    #s007-email {top: 64%; font-weight: 900;}
     #s007-gh {
         top: 77%; left: 42%;
         width: 12%;

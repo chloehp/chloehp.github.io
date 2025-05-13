@@ -22,6 +22,7 @@ document.onreadystatechange = function () {
             loady.remove();
             loadyText.remove();
             flip();
+            document.getElementById("flip").style.pointerEvents = "all";
         }, 1800);
     }
 }
