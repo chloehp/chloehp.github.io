@@ -2676,6 +2676,7 @@ function displayAstro(display) {
     astroPendulum.style.translate = "0";
     astroPendulum.style.rotate = "-9deg";
     tvFuzzer();
+    document.getElementById("sfx-gearsspin3").play();
     setTimeout(function () {
       tvSet.classList.remove("astro");
       //witchBox.style.backgroundImage = "";
@@ -2718,17 +2719,27 @@ function astro(dateObj = new Date()) {
         const orbitTravelInDegrees = daysTravelled * (360 / planetTable[i].orbitTime);  // find heliocentric longitude travel based off a planet's orbit time
         planetTable[i].position = planetTable[i].position - orbitTravelInDegrees;       // update position in planetTable
         const pEl = document.getElementById(planetTable[i].planet + "Element");         // get element
+        const sfxGearsSpin1 = document.getElementById("sfx-gearsspin1");                // get audio element
+        const sfxGearsSpin2 = document.getElementById("sfx-gearsspin2");                // get audio element
+        let rotationSpeed = 3;
 
-        let rotationSpeed = "3s";
-        if (Math.abs(daysTravelled) < 180)      {rotationSpeed = "3s"}                  // decide rotation speed based on how much it needs to spin        
-        else if (Math.abs(daysTravelled) < 720) {rotationSpeed = "6s"}
-        else /**travelled more than 720 days**/ {rotationSpeed = "9s"}
-        pEl.style.transition = "rotate " + rotationSpeed;
+        if (Math.abs(daysTravelled) < 180)      {rotationSpeed = 3}                  // decide rotation speed based on how much it needs to spin        
+        else if (Math.abs(daysTravelled) < 720) {rotationSpeed = 6}
+        else /**travelled more than 720 days**/ {rotationSpeed = 9}
 
+        setTimeout(function () {
+          sfxGearsSpin1.play();                   // play gear spin 1 audio loop (sfx gear spinning fast)
+          setTimeout(function () {                // after 'rotationSpeed' minus length of time of gear spin 2
+            sfxGearsSpin2.play();                 // play gear spin 2 (sfx gear spinning down and stopping)
+            sfxGearsSpin1.pause();                // stop the gear spin 1 audio loop
+          }, (rotationSpeed - 3) * 1000);       // times 1000 to make it milliseconds
+        }, 300);
+        
+        pEl.style.transition = "rotate " + rotationSpeed + "s";
         pEl.style.rotate = planetTable[i].position + "deg";                             // rotate element
 
         if (pEl.children[0]){
-          pEl.children[0].style.transition = "rotate " + rotationSpeed;                 // counter rotation speed
+          pEl.children[0].style.transition = "rotate " + rotationSpeed + "s";           // counter rotation speed
           pEl.children[0].style.rotate = planetTable[i].position * -1 + "deg";          // counter rotate sub element
         }
         else {
@@ -2786,10 +2797,14 @@ let skipIntro = false;                                                          
 const scens = {
     start : function() {
         styleConsole("Loading . . . ");        
+        document.getElementById("sfx-bg").play();                                       // play background hum
         document.getElementById("intro-leaves-left").classList.add("leaves-start");     // move leaves
         document.getElementById("intro-leaves-right").classList.add("leaves-start");
         document.getElementById("begin").style.animation = "fade-out 600ms linear forwards";
-        document.getElementById("intro").style.backgroundSize = "180%";
+        document.getElementById("intro").style.backgroundSize = "180%";        
+        setTimeout(function(){
+            document.getElementById("sfx-leaves1").play();
+        }, 1000);
 
         scens.i5(1800);
     },
@@ -2815,30 +2830,28 @@ const scens = {
         setTimeout(function(){
             w.style.backgroundPosition = "calc(100%/3)";
             setTimeout(function(){                
+                document.getElementById("sfx-cackle1").play();
                 w.style.backgroundPosition = "calc(200%/3)";
                 console.log("whee");
-            }, 250);
+            }, 150);
             setTimeout(function(){                
                 w.style.backgroundPosition = "calc(300%/3)";
             }, 500);
             setTimeout(function(){
                 w.style.backgroundPosition = "calc(200%/3)";
                 console.log("hee");
-            }, 750);
+            }, 800);
             setTimeout(function(){
                 w.style.backgroundPosition = "calc(300%/3)";
-            }, 1000);
+            }, 1100);
             setTimeout(function(){
                 w.style.backgroundPosition = "calc(200%/3)";
                 console.log("hee");
-            }, 1250);
-            setTimeout(function(){
-                w.style.backgroundPosition = "calc(300%/3)";
             }, 1500);
             setTimeout(function(){
                 w.style.backgroundPosition = "calc(200%/3)";
                 console.log("heee");
-            }, 1750);
+            }, 1800);
 
             setTimeout(function(){
                 w.style.backgroundPosition = "calc(100%/3)";
@@ -2899,7 +2912,7 @@ const scens = {
                 );
                 setTimeout(function(){ w.style.backgroundPosition = "0"; }, 1200);
                 scens.i20(2100);
-            }, 3000);
+            }, 1800);
         }, t);
     },
     i20 : function(t) {
@@ -2911,6 +2924,7 @@ const scens = {
         setTimeout(function(){
             leftLeaves.classList.add("leafmove4l");
             rightLeaves.classList.add("leafmove4r");
+            document.getElementById("sfx-leaves2").play();
 
             if (sck > 18) {                                                             // if user has talked to graham before
                 styleConsole("Hiii again.",  18, "#95ffdc");
@@ -3103,6 +3117,7 @@ async function styleConsole(inputText = "", speed = 18, color = "") {
     const newItem = document.createElement("p");
     const theConsole = document.getElementById("styleconsole");   
     const clickBlock = document.getElementById("click-block");
+    const buzzSfx = document.getElementById("sfx-buzz1");
     
     //reset num if it's too big
     if (styleConNum > 999) {styleConNum = 0;}
@@ -3129,6 +3144,7 @@ async function styleConsole(inputText = "", speed = 18, color = "") {
         //split textComposite into array
         const textArray = inputText.split("");
         const textArrayLen = textArray.length;
+        buzzSfx.play();
     
         //characters are printed individually, 'speed' ms between chars, after a 120ms delay
         for (let i = 0; i < textArrayLen; i++) {
@@ -3139,11 +3155,13 @@ async function styleConsole(inputText = "", speed = 18, color = "") {
                 if (i >= (textArray.length - 1)) {
                     //remove click block
                     clickBlock.style.display = "none";    
+                    buzzSfx.pause();
                 }
             }, (120 + i * speed));
         }
     }
     else {
+        buzzSfx.pause();
         clickBlock.style.display = "none";
     }    
     styleConNum++;
@@ -3197,18 +3215,19 @@ function knockOnTheConsole() {
 let scaryNum = 0;
 function scary() {
     scaryNum++;
-    setTimeout(function(){scaryNum = 0}, 30000);                                           // reset 30 secs after first click
-    if (scaryNum === 30) {                                                                 // after 30 clicks
+    setTimeout(function(){scaryNum = 0}, 30000);                                        // reset 30 secs after first click
+    if (scaryNum === 30) {                                                              // after 30 clicks
         styleConsole( "I wouldn't do that if I were you.",  60, "red" );
     }
-    if (scaryNum === 60) {                                                                 // after 60 clicks
+    if (scaryNum === 60) {                                                              // after 60 clicks
         styleConsole( "I THINK YOU SHOULD STOP THAT.",  90, "red" );
     }
-    if (scaryNum === 90) {                                                                 // after 90 clicks
+    if (scaryNum === 90) {                                                              // after 90 clicks
+        document.getElementById("sfx-scream").play();                                   // play sfx
         document.getElementById("witch").style.backgroundImage = "none";
         document.getElementById("tv-fuzz").style.opacity = "0.06";
         const clickBlock = document.getElementById("click-block");
-        localStorage.setItem("witchGone", "true");                                          // set localStorage
+        localStorage.setItem("witchGone", "true");                                      // set localStorage
         styleConsole(
             "BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO! BOO!",
             60,
