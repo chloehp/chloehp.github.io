@@ -211,6 +211,13 @@ const artList = [
         cat: "",
     },
     {
+        thumb: "../art/jester-paint-thumb.webp",
+        url: "../art/jester-paint.webp",
+        title: "Jester",
+        desc: "",
+        cat: "",
+    },
+    {
         thumb: "",
         url: "../art/weddinginvite.webp",
         title: "Wedding invite",
@@ -256,6 +263,13 @@ const artList = [
         thumb: "../art/Static-thumb.webp",
         url: "../art/Static.webp",
         title: "Static, 0-1",
+        desc: "",
+        cat: "",
+    },
+    {
+        thumb: "../art/church-thumb.webp",
+        url: "../art/church.webp",
+        title: "Cornish Church",
         desc: "",
         cat: "",
     },
