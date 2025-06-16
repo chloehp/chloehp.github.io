@@ -14,15 +14,15 @@ const artList = [
         cat: "sketchbook",
     },
     {
-        thumb: "../art/sketchbook/20250123_143806-thumb.webp",
-        url:   "../art/sketchbook/20250123_143806.webp",
+        thumb: "../art/sketchbook/20250123_143737-thumb.webp",
+        url: "../art/sketchbook/20250123_143737.webp",
         title: "Sketch from sketchbook",
         desc: "",
         cat: "sketchbook",
     },
     {
-        thumb: "../art/sketchbook/20250123_143737-thumb.webp",
-        url: "../art/sketchbook/20250123_143737.webp",
+        thumb: "../art/sketchbook/jester-thumb.webp",
+        url: "../art/sketchbook/jester.webp",
         title: "Sketch from sketchbook",
         desc: "",
         cat: "sketchbook",
@@ -58,6 +58,13 @@ const artList = [
     {
         thumb: "../art/sketchbook/20250123_143846-thumb.webp",
         url:   "../art/sketchbook/20250123_143846.webp",
+        title: "Sketch from sketchbook",
+        desc: "",
+        cat: "sketchbook",
+    },
+    {
+        thumb: "../art/sketchbook/20250123_143806-thumb.webp",
+        url:   "../art/sketchbook/20250123_143806.webp",
         title: "Sketch from sketchbook",
         desc: "",
         cat: "sketchbook",
