@@ -2797,7 +2797,7 @@ let skipIntro = false;                                                          
 const scens = {
     start : function() {
         styleConsole("Loading . . . ");        
-        document.getElementById("sfx-bg").play();                                       // play background hum
+        document.getElementById("bg-music").play();                                     // play background music
         document.getElementById("intro-leaves-left").classList.add("leaves-start");     // move leaves
         document.getElementById("intro-leaves-right").classList.add("leaves-start");
         document.getElementById("begin").style.animation = "fade-out 600ms linear forwards";
@@ -3066,6 +3066,7 @@ function spinWheel() {
         if (currentTarotIndex >= majorArcanaLen) currentTarotIndex = 0;
     }
     
+    document.getElementById("sfx-wheel").play();
     const screenCard = document.createElement("div");               // create card element for screen
     screenCard.setAttribute("class", "btn--wheel-card");
     screenCard.innerHTML = "<h3>" + romanNumerals[currentTarotIndex] + "</h3><h4>" + majorArcana[currentTarotIndex].card + "</h4>";
@@ -3086,7 +3087,7 @@ function wheelFinish() {
     const card2 = majorArcana[cardsPulled[1]];
     const card3 = majorArcana[cardsPulled[2]];
     const posiLevel = card1.posi + card2.posi + card3.posi;
-    let conclusion = "Listen to the wisdom of the cards, but most of all, listen to the voice inside your head";
+    let conclusion = "Listen to the wisdom of the cards, but most of all, listen to the voice inside your head.";
     if (posiLevel < -1) conclusion = "Maybe the results of this reading are not excatly what you wanted to hear. But remember, life is chaos - the cards, or the spirits who control them, whatever you believe - are not truly prophetic, simply very wise. Do not fall into dispair but use this guidance to think about the actions you could take. Then again, I am but a pre-written message and maybe you know better than me the true meaning of your card pull!";
     if (posiLevel > 3) conclusion = "It seems the cards see good things coming for you. Count your blessings, but do not throw caution to the wind! Remember - this is not prophecy but guidence, let it lead you in protecting yourself and your loved ones, or bringing about positive change to the world around you.";
 
@@ -3518,37 +3519,37 @@ const majorArcana = [
     },
     {
         card: "The Hiero&#8203;phant",
-        desc: "5",
+        desc: "The answer lies with your elders.",
         posi: 0,
         image: "assets/img/05_Hierophant.webp"
     },
     {
         card: "The Lovers",
-        desc: "6",
+        desc: "Seek union.",
         posi: 0,
         image: "assets/img/06_Lovers.webp"
     },
     {
         card: "The Chariot",
-        desc: "7",
+        desc: "If you don't drive the cart, who will?",
         posi: 0,
         image: "assets/img/07_Chariot.webp"
     },
     {
         card: "Strength",
-        desc: "8",
+        desc: "A rock is a rock, but what is your Strength?",
         posi: 3,
         image: "assets/img/08_Strength.webp"
     },
     {
         card: "The Hermit",
-        desc: "9",
+        desc: "You've got some ponderin' to get to.",
         posi: 0,
         image: "assets/img/09_Hermit.webp"
     },
     {
         card: "Wheel of Fortune",
-        desc: "10",
+        desc: "Time turns the wheels of change.",
         posi: 0,
         image: "assets/img/10_Wheel_of_Fortune.webp"
     },
@@ -3590,7 +3591,7 @@ const majorArcana = [
     },
     {
         card: "The Star",
-        desc: "To fulfil your purpose.",
+        desc: "You have a purpose to fulfill. Dare you rise to meet them?",
         posi: 3,
         image: "assets/img/17_Star.webp"
     },
@@ -3602,7 +3603,7 @@ const majorArcana = [
     },
     {
         card: "The Sun",
-        desc: "Everything's sunny.",
+        desc: "The future's looking sunny.",
         posi: 9,
         image: "assets/img/19_Sun.webp"
     },
@@ -3614,7 +3615,7 @@ const majorArcana = [
     },
     {
         card: "The World",
-        desc: "Know thyself",
+        desc: "Know thyself.",
         posi: 0,
         image: "assets/img/21_World.webp"
     },
@@ -3693,6 +3694,7 @@ $("body").on('click', '[data-click]', function() {
 /*  FUZZ IN AND OUT TO TRANSITION BETWEEN SCREENS  */
 function tvFuzzer() {
     const fuzzEl = document.getElementById("tv-fuzz");
+    document.getElementById("sfx-static").play();
     fuzzEl.setAttribute("class", "fuzz fuzz--in");
     fuzzEl.style.opacity = 0.9;
     setTimeout(function(){
