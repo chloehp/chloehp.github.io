@@ -287,4 +287,11 @@ const artList = [
         desc: "",
         cat: "",
     },
+    {
+        thumb: "",
+        url: "../art/domestic_hedgehog.webp",
+        title: "",
+        desc: "",
+        cat: "",
+    },
 ];
